@@ -1,0 +1,64 @@
+.header-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 12px;
+}
+
+.header-game h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+
+  color: #fff;
+}
+
+.main-game {
+  height: calc(100vh - 15vh);
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-areas:
+    'game__left--blue game__right--yellow'
+    'game__bottom-left--red game__bottom-right--green';
+  gap: 10px;
+
+  /* border: 1px s #fff; */
+  background-color: #fff;
+  border-radius: 100%;
+
+  width: 700px;
+  height: 700px;
+}
+
+.game__left--blue {
+  grid-area: 'game__left--blue';
+  background-color: blue;
+  border-top-left-radius: 100%;
+}
+.game__right--yellow {
+  grid-area: 'game__right--yellow';
+  background-color: yellow;
+  border-top-right-radius: 100%;
+}
+
+.game__bottom-left--red {
+  grid-area: 'game__bottom-left--red';
+  background-color: red;
+  border-bottom-left-radius: 100%;
+}
+.game__bottom-right--green {
+  grid-area: 'game__bottom-right--green';
+  background-color: green;
+  border-bottom-right-radius: 100%;
+}
+
+.selected {
+  opacity: 0.4;
+}
